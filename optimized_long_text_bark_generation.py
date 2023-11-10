@@ -1,6 +1,6 @@
 ######################## 
 # INTRODUCTION:
-# This notebook shows how to generate very long texts using very high speed, based on Flash Attention 2 and batching.
+# This script shows how to generate very long texts using very high speed, based on Flash Attention 2 and batching.
 # It was run on a 40 GB A100 GPU with Pytorch 2.1 and saved me 3 times more time than using Better Transfomer (https://huggingface.co/blog/optimizing-bark#1-%F0%9F%A4%97-better-transformer) with the same batch size.
 # My benchmark also showed a 20x higher throughput when generating 400 semantic tokens and a batch size of 32 compared to generating sentence one by one with the native implementation of attention (without optimization).
 # In other words, with batch generation and Flash Attention2, you'll get the whole generation 20x faster.

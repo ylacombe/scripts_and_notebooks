@@ -13,6 +13,25 @@ If tar.gz, use python and tarfile.
 
 If zip, unzip it using shell commands (like unzip).
 
+**EXAMPLE - 2 FIRST STEPS**
+
+```sh
+#!/bin/bash
+
+mkdir /home/yoach/datasets/google-tamil
+cd /home/yoach/datasets/google-tamil
+wget https://www.openslr.org/resources/65/about.html
+wget https://www.openslr.org/resources/65/LICENSE
+wget https://www.openslr.org/resources/65/line_index_female.tsv
+wget https://www.openslr.org/resources/65/ta_in_female.zip
+wget https://www.openslr.org/resources/65/line_index_male.tsv
+wget https://www.openslr.org/resources/65/ta_in_male.zip
+
+
+unzip ta_in_female.zip -d female/
+unzip ta_in_male.zip -d male/
+```
+
 ## 3. Decide how you'll structure the dataset
 
 Usually, there are 3 layers of structure:
